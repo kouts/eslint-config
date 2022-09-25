@@ -1,0 +1,62 @@
+{
+  "name": "@kouts/eslint-config",
+  "version": "0.0.1",
+  "description": "Kouts's ESLint config",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "base.js",
+    "javascript.js",
+    "vue.js",
+    "vue2.js",
+    "vue3.js",
+    "vue3-typescript.js",
+    "prettier.config.js",
+    "configVars.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"**/*.js\"",
+    "lint-fix": "eslint --fix \"**/*.js\"",
+    "lint-debug": "eslint -c vue3-typescript.js --print-config \"**/*.js\" > ./eslint-debug.json"
+  },
+  "keywords": [
+    "lint",
+    "eslint",
+    "eslintplugin",
+    "eslintconfig",
+    "standard",
+    "vue",
+    "vue3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kouts/eslint-config.git"
+  },
+  "author": "kouts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kouts/eslint-config/issues"
+  },
+  "homepage": "https://github.com/kouts/eslint-config#readme",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.3",
+    "vue-eslint-parser": "^9.0.3"
+  },
+  "peerDependencies": {
+    "eslint": "^8.20.0"
+  }
+}
