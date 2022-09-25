@@ -12,16 +12,16 @@ npm i -D @kouts/eslint-config
 
 There are 4 ESLint config presets that you can use:
 
-- `plugin:@kouts/eslint-config/javascript` for JavaScript / TypeScript projects
-- `plugin:@kouts/eslint-config/vue2` for Vue.js 2 projects
-- `plugin:@kouts/eslint-config/vue3` for Vue.js 3 projects
-- `plugin:@kouts/eslint-config/vue3-typescript` for Vue.js 3 / TypeScript projects
+- `@kouts/eslint-config/javascript` for JavaScript / TypeScript projects
+- `@kouts/eslint-config/vue2` for Vue.js 2 projects
+- `@kouts/eslint-config/vue3` for Vue.js 3 projects
+- `@kouts/eslint-config/vue3-typescript` for Vue.js 3 / TypeScript projects
 
 Add the desired config preset into your `.eslintrc.js` file:
 
 ```javascript
 module.exports = {
-  extends: ['plugin:@kouts/eslint-config/vue2']
+  extends: ['@kouts/eslint-config/vue2']
 }
 ```
 
