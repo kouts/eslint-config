@@ -1,6 +1,6 @@
 {
   "name": "@kouts/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Kouts's ESLint config",
   "main": "index.js",
   "files": [
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/kouts/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/parser": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.1",
     "@vue/eslint-config-typescript": "^11.0.2",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
