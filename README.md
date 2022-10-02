@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-npm i -D @kouts/eslint-config
+npm i -D @kouts/eslint-config eslint prettier
 ```
 
 ## Usage
