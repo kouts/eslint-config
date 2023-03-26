@@ -1,13 +1,9 @@
-const javascript = require.resolve('./javascript.js')
-const vue = require.resolve('./vue.js')
+const base = require.resolve('./base.js')
 
 module.exports = {
-  extends: ['@nuxtjs/eslint-config-typescript', vue, javascript],
+  extends: [base, '@nuxtjs/eslint-config-typescript', 'plugin:prettier/recommended'],
   rules: {
     /* Typescript */
-
-    // Disable 'no-unused-vars' as TypeScript has its own version
-    'no-unused-vars': 'off',
 
     // Prefer T[] instead of Array<T>
     '@typescript-eslint/array-type': ['error', { default: 'array' }]
