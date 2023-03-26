@@ -1,6 +1,6 @@
 {
   "name": "@kouts/eslint-config",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Kouts's ESLint config",
   "main": "index.js",
   "files": [
