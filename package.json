@@ -1,6 +1,6 @@
 {
   "name": "@kouts/eslint-config",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Kouts's ESLint config",
   "main": "index.js",
   "files": [
@@ -11,6 +11,7 @@
     "vue2.js",
     "vue3.js",
     "vue3-typescript.js",
+    "nuxt3.js",
     "prettier.config.js",
     "configVars.js"
   ],
@@ -40,9 +41,10 @@
   },
   "homepage": "https://github.com/kouts/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/parser": "^5.53.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "@vue/eslint-config-typescript": "^11.0.2",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.27.5",
@@ -50,16 +52,16 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vue": "^9.10.0",
     "vue-eslint-parser": "^9.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.35.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.8.4"
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.7",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "eslint": "^8.35.0",
-    "prettier": "^2.8.4"
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.7"
   }
 }

@@ -16,6 +16,7 @@ There are 4 ESLint config presets that you can use:
 - `@kouts/eslint-config/vue2` for Vue.js 2 projects
 - `@kouts/eslint-config/vue3` for Vue.js 3 projects
 - `@kouts/eslint-config/vue3-typescript` for Vue.js 3 / TypeScript projects
+- `@kouts/eslint-config/nuxt3` for Nuxt 3 projects
 
 Add the desired config preset into your `.eslintrc.js` file:
 
