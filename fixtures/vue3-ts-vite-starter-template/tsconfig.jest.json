@@ -1,5 +1,5 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "include": [
     "env.d.ts",
     "tests/**/*",
@@ -7,14 +7,14 @@
   ],
   "compilerOptions": {
     "composite": true,
+    "types": [
+      "node",
+      "jest"
+    ],
     "paths": {
       "@/*": [
         "./src/*"
       ]
-    },
-    "types": [
-      "jest",
-      "jsdom"
-    ],
+    }
   }
 }
