@@ -17,5 +17,6 @@ defineOptions({
 
 const msg = ref<string>('Welcome to Your Vue.js + Vite App')
 
-msg.value = 4
+// Uncomment the following line to see the error
+// msg.value = 4
 </script>
