@@ -1,9 +1,3 @@
-const configVars = require('./configVars.js')
+import configPrettier from './dist/prettier.js'
 
-module.exports = {
-  trailingComma: 'none',
-  printWidth: configVars.printWidth,
-  tabWidth: 2,
-  semi: false,
-  singleQuote: true
-}
+export default configPrettier

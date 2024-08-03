@@ -3,13 +3,13 @@
     <div class="text-center">
       <img alt="Vue logo" src="@/assets/logo.png" class="text-center" />
     </div>
-    <hello-world :msg="msg" />
+    <HelloWorld :msg="msg" />
   </div>
 </template>
 
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
 import { ref } from 'vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 
 defineOptions({
   name: 'Home'
