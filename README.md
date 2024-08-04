@@ -1,6 +1,6 @@
 # @kouts/eslint-config
 
-> Custom ESLint and Prettier config with sensible defaults
+> Custom ESLint and Prettier config with Vue.js support and sensible defaults
 
 > [!NOTE]  
 > Starting from v1, this ESLint config uses the [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) and is only compatible with ESLint v9 or v8.50.0+.  
@@ -29,6 +29,8 @@ export default [
 ]
 ```
 
+#### Customizing the config
+
 You can customize the config by passing an object to the `config` function:
 
 ```javascript
@@ -39,7 +41,7 @@ config({
 })
 ```
 
-Available options:
+**Available options:**
 
 | Option     | Type       | Description                   | Default |
 | ---------- | ---------- | ----------------------------- | ------- |
@@ -49,7 +51,7 @@ Available options:
 
 ### Prettier config
 
-Add a `prettier.config.js` file with contents:
+Create a `prettier.config.js` file with the following content:
 
 ```javascript
 import prettierConfig from '@kouts/eslint-config/prettier'
@@ -59,7 +61,7 @@ export default prettierConfig
 
 ### package.json scripts
 
-You can add ESLint commands to `.package-json` for linting and autofixing:
+Add the following ESLint commands to your `.package-json` for linting and autofixing:
 
 ```json
 {
@@ -70,7 +72,7 @@ You can add ESLint commands to `.package-json` for linting and autofixing:
 
 ### VS Code settings
 
-Put the following into VS Code project settings for autofix on save
+Ad the following settings to your VS Code project settings for autofix on save:
 
 `.vscode/settings.json`
 
