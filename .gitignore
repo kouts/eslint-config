@@ -1,2 +1,11 @@
+# Dependency directories
 node_modules
+
+# IDE
 .vscode
+
+# Build files
+dist
+
+# Misc
+.eslint-config-inspector
