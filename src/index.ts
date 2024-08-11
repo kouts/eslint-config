@@ -19,7 +19,7 @@ const config = (options?: Options) => {
     ts: true,
     vue: true,
     vueVersion: 3,
-    ...options
+    ...options,
   }
 
   const linterConfig: Linter.Config[] = [
@@ -32,14 +32,14 @@ const config = (options?: Options) => {
         'vendor/**',
         'dist/**',
         'public/**',
-        ...resolveIgnoresFromGitignore()
-      ]
+        ...resolveIgnoresFromGitignore(),
+      ],
     },
 
     // JavaScript
     {
       name: 'kouts/javascript',
-      ...js.configs.recommended
+      ...js.configs.recommended,
     },
 
     // TypeScript
@@ -57,19 +57,19 @@ const config = (options?: Options) => {
           { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
           { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
           { blankLine: 'always', prev: 'directive', next: '*' },
-          { blankLine: 'any', prev: 'directive', next: 'directive' }
+          { blankLine: 'any', prev: 'directive', next: 'directive' },
         ],
         // Console and debugger settings depending whether we're on production or not
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
-      }
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+      },
     },
 
     // Import
     {
       name: 'kouts/import',
       plugins: {
-        import: pluginImport
+        import: pluginImport,
       },
       rules: {
         'import/export': 'error',
@@ -80,26 +80,26 @@ const config = (options?: Options) => {
         'import/no-self-import': 'error',
         'import/no-webpack-loader-syntax': 'error',
         'import/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
-        'import/newline-after-import': ['error', { count: 1 }]
-      }
+        'import/newline-after-import': ['error', { count: 1 }],
+      },
     },
 
     // Sort imports
     {
       name: 'kouts/sort-imports',
       plugins: {
-        'simple-import-sort': pluginSimpleImportSort
+        'simple-import-sort': pluginSimpleImportSort,
       },
       rules: {
         'simple-import-sort/imports': [
           'error',
           // Remove all blank lines between imports
           {
-            groups: [['^\\u0000', '^node:', '^@?\\w', '^', '^\\.']]
-          }
+            groups: [['^\\u0000', '^node:', '^@?\\w', '^', '^\\.']],
+          },
         ],
-        'simple-import-sort/exports': 'error'
-      }
+        'simple-import-sort/exports': 'error',
+      },
     },
 
     // HTML
@@ -107,8 +107,8 @@ const config = (options?: Options) => {
       name: 'kouts/html',
       files: ['**/*.html'],
       plugins: {
-        html: pluginHtml
-      }
+        html: pluginHtml,
+      },
     },
 
     // Vue
@@ -117,8 +117,8 @@ const config = (options?: Options) => {
     // Prettier
     {
       name: 'kouts/prettier',
-      ...pluginPrettier
-    }
+      ...pluginPrettier,
+    },
   ]
 
   return linterConfig

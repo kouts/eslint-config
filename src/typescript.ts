@@ -17,8 +17,8 @@ export const typescript: Linter.Config[] = [
         'error',
         {
           prefer: 'type-imports',
-          fixStyle: 'inline-type-imports'
-        }
+          fixStyle: 'inline-type-imports',
+        },
       ],
 
       // Allow _ for unused variables
@@ -29,9 +29,9 @@ export const typescript: Linter.Config[] = [
           caughtErrors: 'none',
           ignoreRestSiblings: true,
           vars: 'all',
-          argsIgnorePattern: '^_'
-        }
-      ]
-    }
-  }
+          argsIgnorePattern: '^_',
+        },
+      ],
+    },
+  },
 ]

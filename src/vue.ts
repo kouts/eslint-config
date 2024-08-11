@@ -11,7 +11,7 @@ const vue = (options?: Options) => {
   const opts: Options = {
     version: 3,
     ts: true,
-    ...options
+    ...options,
   }
 
   const vueConfig = opts.version === 3 ? pluginVue.configs['flat/recommended'] : pluginVue.configs['flat/vue2-recommended']
@@ -20,9 +20,9 @@ const vue = (options?: Options) => {
     ? {
         languageOptions: {
           parserOptions: {
-            parser: plugins['typescript-eslint'].parser
-          }
-        }
+            parser: plugins['typescript-eslint'].parser,
+          },
+        },
       }
     : {}
 
@@ -67,14 +67,14 @@ const vue = (options?: Options) => {
             html: {
               void: 'always',
               normal: 'never',
-              component: 'always'
+              component: 'always',
             },
             svg: 'always',
-            math: 'always'
-          }
-        ]
-      }
-    }
+            math: 'always',
+          },
+        ],
+      },
+    },
   ]
 
   return config
