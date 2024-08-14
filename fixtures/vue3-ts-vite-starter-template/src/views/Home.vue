@@ -12,7 +12,7 @@ import { ref } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 defineOptions({
-  name: 'Home'
+  name: 'Home',
 })
 
 const msg = ref<string>('Welcome to Your Vue.js + Vite App')

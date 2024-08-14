@@ -4,18 +4,20 @@ import pluginHtml from 'eslint-plugin-html'
 import pluginImport from 'eslint-plugin-import-x'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
-import neostandard, { plugins, resolveIgnoresFromGitignore } from 'neostandard'
+import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from 'neostandard'
 import { typescript } from './typescript'
 import { vue } from './vue'
 
 type Options = {
-  ts?: boolean
   vue?: boolean
   vueVersion?: 2 | 3
-}
+} & NeostandardOptions
 
 const config = (options?: Options) => {
   const opts: Options = {
+    noJsx: true,
+    noStyle: true,
+    semi: false,
     ts: true,
     vue: true,
     vueVersion: 3,
@@ -46,7 +48,7 @@ const config = (options?: Options) => {
     ...(opts.ts ? typescript : []),
 
     // Neostandard
-    ...neostandard({ noJsx: true, noStyle: true, semi: false, ts: opts.ts }),
+    ...neostandard(opts),
     {
       name: 'kouts/neostandard-overrides',
       rules: {

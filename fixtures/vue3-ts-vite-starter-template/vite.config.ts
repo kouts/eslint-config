@@ -11,22 +11,22 @@ export default defineConfig({
       inject: {
         data: {
           title: 'ProjectName',
-          description: 'A single page application created using Vue.js 3'
-        }
-      }
-    })
+          description: 'A single page application created using Vue.js 3',
+        },
+      },
+    }),
   ],
   resolve: {
     alias: {
       '@': resolve(__dirname, '/src'),
-      '~bootstrap': 'bootstrap'
-    }
+      '~bootstrap': 'bootstrap',
+    },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/scss/variables";`
-      }
-    }
-  }
+        additionalData: `@import "./src/scss/variables";`,
+      },
+    },
+  },
 })

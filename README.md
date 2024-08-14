@@ -25,29 +25,34 @@ export default [
   ...config(),
   {
     // Add custom rules here
-  }
+  },
 ]
 ```
 
 #### Customizing the config
 
-You can customize the config by passing an object to the `config` function:
+The configuration comes with default settings that extend the [neostandard config](https://github.com/neostandard/neostandard/tree/main?tab=readme-ov-file#configuration-options) config. You can further customize it by passing an object to the `config` function:
 
-```javascript
-config({
-  ts: true,
-  vue: true
-  vueVersion: 3
-})
-```
-
-**Available options:**
+**Config settings defaults:**
 
 | Option     | Type       | Description                   | Default |
 | ---------- | ---------- | ----------------------------- | ------- |
 | ts         | `boolean`  | Enable TypeScript support     | `true`  |
+| noJsx      | `boolean`  | No jsx rules will be added    | `true`  |
+| noStyle    | `boolean`  | No style rules will be added  | `true`  |
+| semi       | `boolean`  | No semicilons                 | `false` |
 | vue        | `boolean`  | Enable Vue.js support         | `true`  |
 | vueVersion | `2` or `3` | Specify the version of Vue.js | `3`     |
+
+**Example:**
+
+```javascript
+config({
+  ts: false,
+  vue: true
+  vueVersion: 3
+})
+```
 
 ### Prettier config
 
