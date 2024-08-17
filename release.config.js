@@ -1,6 +1,6 @@
 export default {
   branches: [
-    'master',
+    'main',
     {
       name: 'beta',
       prerelease: true,
