@@ -47,7 +47,8 @@
     "inspect": "npx @eslint/config-inspector --config eslint.config.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "pnpm run build && eslint .",
-    "lint-fix": "pnpm run build && eslint --fix ."
+    "lint-fix": "pnpm run build && eslint --fix .",
+    "prepare": "husky"
   },
   "keywords": [
     "lint",
@@ -78,8 +79,12 @@
     "prettier": "^3.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@types/node": "^22.3.0",
     "eslint": "^9.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
     "pkgroll": "^2.4.2",
     "typescript": "^5.5.4"
   },
