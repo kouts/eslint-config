@@ -1,4 +1,5 @@
 import js from '@eslint/js'
+import pluginVitest from '@vitest/eslint-plugin'
 import type { Linter } from 'eslint'
 import pluginHtml from 'eslint-plugin-html'
 import pluginImport from 'eslint-plugin-import-x'
@@ -11,6 +12,7 @@ import { vue } from './vue'
 type Options = {
   vue?: boolean
   vueVersion?: 2 | 3
+  vitest: boolean
 } & NeostandardOptions
 
 const config = (options?: Options) => {
@@ -21,6 +23,7 @@ const config = (options?: Options) => {
     ts: true,
     vue: true,
     vueVersion: 3,
+    vitest: true,
     ...options,
   }
 
@@ -115,6 +118,27 @@ const config = (options?: Options) => {
 
     // Vue
     ...(opts.vue ? vue({ version: opts.vueVersion, ts: opts.ts }) : []),
+
+    // Vitest
+    ...(opts.vitest
+      ? [
+          {
+            name: 'kouts/vitest',
+            files: ['test/**', 'tests/**', '**/*.test.{js,ts}*', '**/*.spec.{js,ts}'],
+            plugins: {
+              vitest: pluginVitest,
+            },
+            rules: {
+              ...pluginVitest.configs.recommended.rules,
+            },
+            languageOptions: {
+              globals: {
+                ...pluginVitest.environments.env.globals,
+              },
+            },
+          },
+        ]
+      : []),
 
     // Prettier
     {

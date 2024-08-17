@@ -1,7 +1,7 @@
 {
   "name": "@kouts/eslint-config",
   "type": "module",
-  "version": "1.2.0",
+  "version": "0.0.0-semantic-release",
   "packageManager": "pnpm@9.7.1",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
@@ -47,7 +47,8 @@
     "inspect": "npx @eslint/config-inspector --config eslint.config.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "pnpm run build && eslint .",
-    "lint-fix": "pnpm run build && eslint --fix ."
+    "lint-fix": "pnpm run build && eslint --fix .",
+    "prepare": "husky"
   },
   "keywords": [
     "lint",
@@ -68,6 +69,7 @@
     "url": "git+https://github.com/kouts/eslint-config.git"
   },
   "dependencies": {
+    "@vitest/eslint-plugin": "^1.0.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-html": "^8.1.1",
     "eslint-plugin-import-x": "^3.1.0",
@@ -78,8 +80,12 @@
     "prettier": "^3.3.3"
   },
   "devDependencies": {
-    "@types/node": "^22.3.0",
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^22.4.0",
     "eslint": "^9.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
     "pkgroll": "^2.4.2",
     "typescript": "^5.5.4"
   },
@@ -87,6 +93,6 @@
     "eslint": "^9.8.0"
   },
   "resolutions": {
-    "@typescript-eslint/utils": "^8.0.0"
+    "@typescript-eslint/utils": "^8.1.0"
   }
 }

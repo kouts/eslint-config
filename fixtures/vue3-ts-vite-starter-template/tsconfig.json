@@ -1,6 +1,6 @@
 {
   "include": [
-    "*.d.ts",
+    "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
     "tests/**/*",
@@ -19,7 +19,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "skipLibCheck": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
@@ -27,12 +27,14 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
-      "jest",
+      "vitest/globals",
       "jsdom",
-      "node"
+      "node",
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
   "exclude": [
