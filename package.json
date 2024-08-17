@@ -1,7 +1,7 @@
 {
   "name": "@kouts/eslint-config",
   "type": "module",
-  "version": "1.2.0",
+  "version": "0.0.0-semantic-release",
   "packageManager": "pnpm@9.7.1",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
