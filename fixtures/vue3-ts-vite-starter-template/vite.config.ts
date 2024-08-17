@@ -1,25 +1,30 @@
+/// <reference types="vitest" />
+
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-import { defineConfig } from 'vite'
-import { createHtmlPlugin } from 'vite-plugin-html'
+import { defineConfig, type Plugin } from 'vite'
+
+const transformHtmlPlugin = (data: Record<string, string>): Plugin => ({
+  name: 'transform-html',
+  transformIndexHtml: {
+    order: 'pre',
+    handler(html: string) {
+      return html.replace(/<%=\s*(\w+)\s*%>/gi, (match, p1) => data[p1] || '')
+    },
+  },
+})
 
 export default defineConfig({
   plugins: [
     vue(),
-    createHtmlPlugin({
-      minify: true,
-      inject: {
-        data: {
-          title: 'ProjectName',
-          description: 'A single page application created using Vue.js 3',
-        },
-      },
+    transformHtmlPlugin({
+      title: 'ProjectName',
+      description: 'A single page application created using Vue.js 3',
     }),
   ],
   resolve: {
     alias: {
       '@': resolve(__dirname, '/src'),
-      '~bootstrap': 'bootstrap',
     },
   },
   css: {
@@ -31,7 +36,8 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    clearMocks: true,
+    globalSetup: './tests/vitest.global-setup.ts',
+    setupFiles: ['./tests/vitest.globals.ts'],
     environment: 'jsdom',
     reporters: ['default'],
     coverage: {

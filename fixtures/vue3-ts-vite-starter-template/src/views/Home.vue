@@ -1,22 +1,16 @@
 <template>
-  <div class="container">
-    <div class="text-center">
-      <img alt="Vue logo" src="@/assets/logo.png" class="text-center" />
+  <div class="mx-auto max-w-screen-xl px-4">
+    <div class="flex justify-center">
+      <div alt="Vue logo" class="mt-8 h-52 w-52 bg-[url('@/assets/logo.svg')] bg-no-repeat" />
     </div>
-    <HelloWorld :msg="msg" />
+    <HelloWorld msg="Vue.js 3 starter template" class="mt-2" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 defineOptions({
   name: 'Home',
 })
-
-const msg = ref<string>('Welcome to Your Vue.js + Vite App')
-
-// Uncomment the following line to see the error
-// msg.value = 4
 </script>
