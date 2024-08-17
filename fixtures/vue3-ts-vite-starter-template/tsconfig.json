@@ -27,12 +27,14 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
-      "jest",
+      "vitest",
       "jsdom",
       "node"
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
   "exclude": [

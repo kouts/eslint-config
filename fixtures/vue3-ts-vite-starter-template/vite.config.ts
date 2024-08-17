@@ -29,4 +29,13 @@ export default defineConfig({
       },
     },
   },
+  test: {
+    globals: true,
+    clearMocks: true,
+    environment: 'jsdom',
+    reporters: ['default'],
+    coverage: {
+      reporter: ['text', 'json'],
+    },
+  },
 })
