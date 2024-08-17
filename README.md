@@ -40,9 +40,10 @@ The configuration comes with default settings that extend the [neostandard confi
 | ts         | `boolean`  | Enable TypeScript support     | `true`  |
 | noJsx      | `boolean`  | No jsx rules will be added    | `true`  |
 | noStyle    | `boolean`  | No style rules will be added  | `true`  |
-| semi       | `boolean`  | No semicilons                 | `false` |
+| semi       | `boolean`  | No semicolons                 | `false` |
 | vue        | `boolean`  | Enable Vue.js support         | `true`  |
 | vueVersion | `2` or `3` | Specify the version of Vue.js | `3`     |
+| vitest     | `boolean`  | Enable Vitest support         | `true`  |
 
 **Example:**
 
@@ -50,7 +51,8 @@ The configuration comes with default settings that extend the [neostandard confi
 config({
   ts: false,
   vue: true
-  vueVersion: 3
+  vueVersion: 3,
+  vitest: false,
 })
 ```
 
@@ -107,6 +109,7 @@ Ad the following settings to your VS Code project settings for autofix on save:
   - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) for using Prettier as a code formatter with `eslint --fix`
   - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) for auto-fixing imports order
   - [eslint-plugin-import-x](https://github.com/lydell/eslint-plugin-simple-import-sort) for auto-fixing import/export syntax, and prevent issues with misspelling of file paths and import names
+  - [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest) for linting Vitest test files
 
 ## License
 
