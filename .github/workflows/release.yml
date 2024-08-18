@@ -35,6 +35,9 @@ jobs:
 
       - name: Run linter 👀
         run: pnpm run lint-fix
+
+      - name: Build ⚙️
+        run: pnpm run build
   release:
     runs-on: ${{ matrix.os }}
     needs: ci
