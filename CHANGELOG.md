@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/kouts/eslint-config/compare/v1.3.1...v1.3.2) (2024-08-18)
+
+
+### Bug Fixes
+
+* removed files from package.json ([881949b](https://github.com/kouts/eslint-config/commit/881949b7c353fc9ed0ed09106f91b450c28b78d1))
+
 ## [1.3.1](https://github.com/kouts/eslint-config/compare/v1.3.0...v1.3.1) (2024-08-18)
 
 
