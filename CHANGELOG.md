@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/kouts/eslint-config/compare/v1.3.3...v1.3.4) (2024-08-25)
+
+
+### Bug Fixes
+
+* updated neostandard to v0.11.3 ([b3f28fd](https://github.com/kouts/eslint-config/commit/b3f28fdbec683eba725ef55d86f2fba245dba174))
+
 ## [1.3.3](https://github.com/kouts/eslint-config/compare/v1.3.2...v1.3.3) (2024-08-18)
 
 
