@@ -2,7 +2,7 @@
   "name": "@kouts/eslint-config",
   "type": "module",
   "version": "0.0.0-semantic-release",
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.9.0",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
@@ -69,20 +69,20 @@
     "url": "git+https://github.com/kouts/eslint-config.git"
   },
   "dependencies": {
-    "@vitest/eslint-plugin": "^1.0.3",
+    "@vitest/eslint-plugin": "^1.0.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-html": "^8.1.1",
-    "eslint-plugin-import-x": "^3.1.0",
+    "eslint-plugin-import-x": "^4.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-vue": "^9.27.0",
-    "neostandard": "^0.11.3",
+    "neostandard": "^0.11.4",
     "prettier": "^3.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@types/node": "^22.5.0",
+    "@types/node": "^22.5.1",
     "eslint": "^9.9.1",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
