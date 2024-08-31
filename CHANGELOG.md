@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/kouts/eslint-config/compare/v1.3.5...v1.3.6) (2024-08-31)
+
+
+### Bug Fixes
+
+* updated npm packages ([24cc39e](https://github.com/kouts/eslint-config/commit/24cc39e5c06730bb0890537c00eb22bcddab4bde))
+
 ## [1.3.5](https://github.com/kouts/eslint-config/compare/v1.3.4...v1.3.5) (2024-08-28)
 
 
