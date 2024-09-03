@@ -15,6 +15,21 @@ type Options = {
   vitest: boolean
 } & NeostandardOptions
 
+// Rename the keys of the pluginImport flatConfigs.typescript config to match our naming convention
+const pluginImportTypescript = Object.keys(pluginImport.flatConfigs.typescript).reduce(
+  (acc, key) => ({
+    ...acc,
+    [key]: Object.keys(pluginImport.flatConfigs.typescript[key]).reduce(
+      (innerAcc, curr) => ({
+        ...innerAcc,
+        [curr.replace('import-x', 'import')]: pluginImport.flatConfigs.typescript[key][curr],
+      }),
+      {},
+    ),
+  }),
+  {},
+)
+
 const config = (options?: Options) => {
   const opts: Options = {
     noJsx: true,
@@ -76,6 +91,7 @@ const config = (options?: Options) => {
       plugins: {
         import: pluginImport,
       },
+      ...(opts.ts ? pluginImportTypescript : {}),
       rules: {
         'import/export': 'error',
         'import/first': 'error',
