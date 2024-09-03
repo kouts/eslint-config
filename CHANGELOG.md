@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/kouts/eslint-config/compare/v1.3.8...v1.3.9) (2024-09-03)
+
+
+### Bug Fixes
+
+* added import/named rule for ts ([4561c41](https://github.com/kouts/eslint-config/commit/4561c418b1fb0772a06637a7df0f29c94b72b967))
+
 ## [1.3.8](https://github.com/kouts/eslint-config/compare/v1.3.7...v1.3.8) (2024-09-03)
 
 
