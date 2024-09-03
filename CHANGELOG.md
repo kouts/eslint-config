@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/kouts/eslint-config/compare/v1.3.7...v1.3.8) (2024-09-03)
+
+
+### Bug Fixes
+
+* added eslint-plugin-import-x typescript config ([075d856](https://github.com/kouts/eslint-config/commit/075d856b988f7c6808426684541667368e1280da))
+
 ## [1.3.7](https://github.com/kouts/eslint-config/compare/v1.3.6...v1.3.7) (2024-09-03)
 
 
