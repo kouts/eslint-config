@@ -93,6 +93,8 @@ const config = (options?: Options) => {
       },
       ...(opts.ts ? pluginImportTypescript : {}),
       rules: {
+        // TypeScript compilation already ensures that named imports exist in the referenced module
+        ...(opts.ts ? { 'import/named': 'off' } : {}),
         'import/export': 'error',
         'import/first': 'error',
         'import/no-duplicates': 'error',
