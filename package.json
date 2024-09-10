@@ -48,6 +48,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "pnpm run build && eslint .",
     "lint-fix": "pnpm run build && eslint --fix .",
+    "lint-fixtures": "pnpm --filter ./fixtures/vue3-ts-vite-starter-template lint",
     "prepare": "husky"
   },
   "keywords": [
@@ -91,8 +92,5 @@
   },
   "peerDependencies": {
     "eslint": "^9.8.0"
-  },
-  "resolutions": {
-    "@typescript-eslint/utils": "^8.1.0"
   }
 }
