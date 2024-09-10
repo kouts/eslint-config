@@ -1,3 +1,10 @@
+## [1.3.10](https://github.com/kouts/eslint-config/compare/v1.3.9...v1.3.10) (2024-09-10)
+
+
+### Bug Fixes
+
+* updated fixtures packages added lint-fixtures command ([70b6e75](https://github.com/kouts/eslint-config/commit/70b6e756e1a81d752524b71d30d9e6085b883b24))
+
 ## [1.3.9](https://github.com/kouts/eslint-config/compare/v1.3.8...v1.3.9) (2024-09-03)
 
 
