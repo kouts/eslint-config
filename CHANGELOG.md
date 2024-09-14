@@ -1,3 +1,11 @@
+## [1.3.12](https://github.com/kouts/eslint-config/compare/v1.3.11...v1.3.12) (2024-09-14)
+
+
+### Bug Fixes
+
+* updated types node ([5207727](https://github.com/kouts/eslint-config/commit/5207727e95d98dd156a1a430c9e146f96f55a8ee))
+* updated vitest/eslint-plugin ([b6dae73](https://github.com/kouts/eslint-config/commit/b6dae73322fd136e3556566747e34e14ac6eef67))
+
 ## [1.3.11](https://github.com/kouts/eslint-config/compare/v1.3.10...v1.3.11) (2024-09-13)
 
 
