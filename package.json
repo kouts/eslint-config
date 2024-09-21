@@ -2,7 +2,7 @@
   "name": "@kouts/eslint-config",
   "type": "module",
   "version": "0.0.0-semantic-release",
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.11.0",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
@@ -84,7 +84,7 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^22.5.5",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "pkgroll": "^2.5.0",
