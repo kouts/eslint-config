@@ -2,7 +2,7 @@
   "name": "@kouts/eslint-config",
   "type": "module",
   "version": "0.0.0-semantic-release",
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.12.3",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
@@ -73,18 +73,18 @@
     "@vitest/eslint-plugin": "^1.1.7",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-html": "^8.1.2",
-    "eslint-plugin-import-x": "^4.3.1",
+    "eslint-plugin-import-x": "^4.4.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-vue": "^9.29.1",
+    "eslint-plugin-vue": "^9.30.0",
     "neostandard": "^0.11.7",
     "prettier": "^3.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@types/node": "^22.8.1",
-    "eslint": "^9.13.0",
+    "@types/node": "^22.8.6",
+    "eslint": "^9.14.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "pkgroll": "^2.5.1",

@@ -40,7 +40,7 @@ The configuration comes with default settings that extend the [neostandard confi
 | ts         | `boolean`  | Enable TypeScript support     | `true`  |
 | noJsx      | `boolean`  | No jsx rules will be added    | `true`  |
 | noStyle    | `boolean`  | No style rules will be added  | `true`  |
-| semi       | `boolean`  | No semicolons                 | `false` |
+| semi       | `boolean`  | Use semicolons                | `false` |
 | vue        | `boolean`  | Enable Vue.js support         | `true`  |
 | vueVersion | `2` or `3` | Specify the version of Vue.js | `3`     |
 | vitest     | `boolean`  | Enable Vitest support         | `true`  |
