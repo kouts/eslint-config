@@ -6,6 +6,9 @@ export const typescript: Linter.Config[] = [
   {
     name: 'kouts/typescript',
     rules: {
+      // Disable 'no-unused-vars' since TypeScript has its own version
+      'no-unused-vars': 'off',
+
       // Prefer T[] instead of Array<T>
       '@typescript-eslint/array-type': ['error', { default: 'array' }],
 
