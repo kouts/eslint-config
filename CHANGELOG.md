@@ -1,3 +1,10 @@
+## [1.3.21](https://github.com/kouts/eslint-config/compare/v1.3.20...v1.3.21) (2024-11-04)
+
+
+### Bug Fixes
+
+* moved no-unused-vars rule ([94a719e](https://github.com/kouts/eslint-config/commit/94a719e776405b75d15fabe3f7b6d3b06b4f61f7))
+
 ## [1.3.20](https://github.com/kouts/eslint-config/compare/v1.3.19...v1.3.20) (2024-11-04)
 
 
