@@ -1,3 +1,10 @@
+## [1.3.20](https://github.com/kouts/eslint-config/compare/v1.3.19...v1.3.20) (2024-11-04)
+
+
+### Bug Fixes
+
+* disabled no-unused-vars rule for TypeScript ([5c57ec2](https://github.com/kouts/eslint-config/commit/5c57ec2748507f8ee46c4b77bc567e65c330f163))
+
 ## [1.3.19](https://github.com/kouts/eslint-config/compare/v1.3.18...v1.3.19) (2024-11-04)
 
 
