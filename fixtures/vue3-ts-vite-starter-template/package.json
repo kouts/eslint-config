@@ -18,7 +18,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "pinia": "^2.2.5",
+    "pinia": "^2.2.6",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
@@ -27,7 +27,7 @@
     "@fullhuman/vue-cli-plugin-purgecss": "^6.0.0",
     "@kouts/eslint-config": "link:../..",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.8.6",
+    "@types/node": "^22.8.7",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vitest/coverage-v8": "^2.1.4",
     "@vue/compiler-sfc": "^3.5.12",
