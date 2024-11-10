@@ -31,7 +31,7 @@ export default [
 
 #### Customizing the config
 
-The configuration comes with default settings that extend the [neostandard config](https://github.com/neostandard/neostandard/tree/main?tab=readme-ov-file#configuration-options) config. You can further customize it by passing an object to the `config` function:
+The configuration comes with default settings that extend the [neostandard](https://github.com/neostandard/neostandard/tree/main?tab=readme-ov-file#configuration-options) config. You can further customize it by passing an object to the `config` function:
 
 **Config settings defaults:**
 
