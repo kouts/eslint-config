@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/kouts/eslint-config/compare/v1.3.23...v2.0.0) (2024-12-16)
+
+
+### Bug Fixes
+
+* updated neostandard to v0.12.0 that includes import-x ([68a98b1](https://github.com/kouts/eslint-config/commit/68a98b1dc5ad966a4e324fd59cc15f5ffddaf4e2))
+
+
+### BREAKING CHANGES
+
+* switching to neostandard changes the import plugin alias to import-x
+
 ## [1.3.23](https://github.com/kouts/eslint-config/compare/v1.3.22...v1.3.23) (2024-11-26)
 
 
