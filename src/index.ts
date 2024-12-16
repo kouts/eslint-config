@@ -2,7 +2,6 @@ import js from '@eslint/js'
 import pluginVitest from '@vitest/eslint-plugin'
 import type { Linter } from 'eslint'
 import pluginHtml from 'eslint-plugin-html'
-import pluginImport from 'eslint-plugin-import-x'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
 import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from 'neostandard'
@@ -14,21 +13,6 @@ type Options = {
   vueVersion?: 2 | 3
   vitest: boolean
 } & NeostandardOptions
-
-// Rename the keys of the pluginImport flatConfigs.typescript config to match our naming convention
-const pluginImportTypescript = Object.keys(pluginImport.flatConfigs.typescript).reduce(
-  (acc, key) => ({
-    ...acc,
-    [key]: Object.keys(pluginImport.flatConfigs.typescript[key]).reduce(
-      (innerAcc, curr) => ({
-        ...innerAcc,
-        [curr.replace('import-x', 'import')]: pluginImport.flatConfigs.typescript[key][curr],
-      }),
-      {},
-    ),
-  }),
-  {},
-)
 
 const config = (options?: Options) => {
   const opts: Options = {
@@ -82,37 +66,18 @@ const config = (options?: Options) => {
         // Console and debugger settings depending whether we're on production or not
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-      },
-    },
-
-    // Import
-    {
-      name: 'kouts/import',
-      plugins: {
-        import: pluginImport,
-      },
-      ...(opts.ts ? pluginImportTypescript : {}),
-      rules: {
-        // TypeScript compilation already ensures that named imports exist in the referenced module
-        // and has its own version of no-unused-vars
+        // Import rules
         ...(opts.ts
           ? {
-              'import/named': 'off',
+              'import-x/named': 'off',
               'no-unused-vars': 'off',
             }
           : {}),
-        'import/export': 'error',
-        'import/first': 'error',
-        'import/no-duplicates': 'error',
-        'import/no-mutable-exports': 'error',
-        'import/no-named-default': 'error',
-        'import/no-self-import': 'error',
-        'import/no-webpack-loader-syntax': 'error',
-        'import/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
-        'import/newline-after-import': ['error', { count: 1 }],
+        'import-x/no-mutable-exports': 'error',
+        'import-x/newline-after-import': ['error', { count: 1 }],
+        'import-x/no-self-import': 'error',
       },
     },
-
     // Sort imports
     {
       name: 'kouts/sort-imports',
