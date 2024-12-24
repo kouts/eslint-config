@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/kouts/eslint-config/compare/v2.0.1...v2.0.2) (2024-12-24)
+
+
+### Bug Fixes
+
+* added dot-notation rule ([5cfea65](https://github.com/kouts/eslint-config/commit/5cfea65628c15e949c9d9ccbef173eb8f5852c59))
+
 ## [2.0.1](https://github.com/kouts/eslint-config/compare/v2.0.0...v2.0.1) (2024-12-24)
 
 
