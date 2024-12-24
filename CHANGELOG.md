@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/kouts/eslint-config/compare/v2.0.0...v2.0.1) (2024-12-24)
+
+
+### Bug Fixes
+
+* updated vitest/eslint-plugin ([01818a9](https://github.com/kouts/eslint-config/commit/01818a934eda432cde24a290432fe4ec6ce1cc3d))
+
 # [2.0.0](https://github.com/kouts/eslint-config/compare/v1.3.23...v2.0.0) (2024-12-16)
 
 
