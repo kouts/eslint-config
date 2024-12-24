@@ -73,6 +73,9 @@ const vue = (options?: Options) => {
             math: 'always',
           },
         ],
+
+        // Enforce dot notation whenever possible in `<template>`
+        'vue/dot-notation': ['error'],
       },
     },
   ]

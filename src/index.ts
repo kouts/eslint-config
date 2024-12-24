@@ -66,6 +66,8 @@ const config = (options?: Options) => {
         // Console and debugger settings depending whether we're on production or not
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        // Enforce dot notation
+        'dot-notation': ['error'],
         // Import rules
         ...(opts.ts
           ? {
