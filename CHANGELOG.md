@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/kouts/eslint-config/compare/v2.0.4...v2.0.5) (2025-02-02)
+
+
+### Bug Fixes
+
+* updated npm packages ([be5090c](https://github.com/kouts/eslint-config/commit/be5090c4092f6179301958fb46ff6f56646ee51b))
+
 ## [2.0.4](https://github.com/kouts/eslint-config/compare/v2.0.3...v2.0.4) (2025-01-16)
 
 
