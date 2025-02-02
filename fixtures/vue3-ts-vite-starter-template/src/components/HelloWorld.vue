@@ -19,17 +19,25 @@
   </div>
 </template>
 
+<script lang="ts">
+import { ref } from 'vue'
+
+const test = ref('Test separate script lang block')
+</script>
+
 <script setup lang="ts">
 defineOptions({
   name: 'HelloWorld',
 })
 
-defineProps({
-  msg: {
-    type: String,
-    default: '',
-  },
+type Props = {
+  msg: string
+}
+withDefaults(defineProps<Props>(), {
+  msg: '',
 })
+
+console.log(test)
 </script>
 
 <style lang="scss" scoped>
