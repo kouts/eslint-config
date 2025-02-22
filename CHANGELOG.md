@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/kouts/eslint-config/compare/v2.0.6...v2.0.7) (2025-02-22)
+
+
+### Bug Fixes
+
+* added no-non-null-assertion rule ([e560f19](https://github.com/kouts/eslint-config/commit/e560f19ecd92d7db2372f17841869b52605b4f10))
+
 ## [2.0.6](https://github.com/kouts/eslint-config/compare/v2.0.5...v2.0.6) (2025-02-07)
 
 
