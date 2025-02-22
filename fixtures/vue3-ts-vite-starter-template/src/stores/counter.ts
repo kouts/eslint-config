@@ -1,10 +1,15 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore({
-  id: 'counter',
-  state: () => ({
-    counter: 0,
-  }),
+type State = {
+  counter: number
+}
+
+export const useCounterStore = defineStore('counter', {
+  state: (): State => {
+    return {
+      counter: 0,
+    }
+  },
   getters: {
     doubleCount: (state) => state.counter * 2,
   },

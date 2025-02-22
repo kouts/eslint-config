@@ -32,6 +32,9 @@ export const typescript: Linter.Config[] = [
           argsIgnorePattern: '^_',
         },
       ],
+
+      // Disallow non-null assertions using the ! postfix operator
+      '@typescript-eslint/no-non-null-assertion': 'error',
     },
   },
 ]

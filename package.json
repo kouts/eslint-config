@@ -70,7 +70,7 @@
     "url": "git+https://github.com/kouts/eslint-config.git"
   },
   "dependencies": {
-    "@vitest/eslint-plugin": "^1.1.25",
+    "@vitest/eslint-plugin": "^1.1.31",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-html": "^8.1.2",
     "eslint-plugin-prettier": "^5.2.3",
@@ -82,11 +82,11 @@
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
-    "@types/node": "^22.13.1",
-    "eslint": "^9.19.0",
+    "@types/node": "^22.13.5",
+    "eslint": "^9.21.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "pkgroll": "^2.8.0",
+    "pkgroll": "^2.10.0",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
