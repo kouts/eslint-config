@@ -1,3 +1,10 @@
+## [2.0.8](https://github.com/kouts/eslint-config/compare/v2.0.7...v2.0.8) (2025-03-02)
+
+
+### Bug Fixes
+
+* added disallow enums rule ([aeebf28](https://github.com/kouts/eslint-config/commit/aeebf28b88bfaf90d2a797b3fc1a75ad2a639d73))
+
 ## [2.0.7](https://github.com/kouts/eslint-config/compare/v2.0.6...v2.0.7) (2025-02-22)
 
 
