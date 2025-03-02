@@ -4,7 +4,7 @@
   "version": "0.0.0-semantic-release",
   "license": "MIT",
   "repository": "https://github.com/kouts/vue3-ts-vite-starter-template",
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@9.15.6",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -27,9 +27,9 @@
     "@fullhuman/vue-cli-plugin-purgecss": "^7.0.2",
     "@kouts/eslint-config": "link:../..",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.13.8",
     "@vitejs/plugin-vue": "^5.2.1",
-    "@vitest/coverage-v8": "^3.0.6",
+    "@vitest/coverage-v8": "^3.0.7",
     "@vue/compiler-sfc": "^3.5.13",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.20",
@@ -37,11 +37,11 @@
     "jsdom": "^26.0.0",
     "prettier": "^3.5.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "sass": "^1.85.0",
+    "sass": "^1.85.1",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.1",
-    "vitest": "^3.0.6",
-    "vue-tsc": "^2.2.0"
+    "typescript": "5.7.3",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7",
+    "vue-tsc": "^2.2.8"
   }
 }

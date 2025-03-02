@@ -35,6 +35,15 @@ export const typescript: Linter.Config[] = [
 
       // Disallow non-null assertions using the ! postfix operator
       '@typescript-eslint/no-non-null-assertion': 'error',
+
+      // Disallow enums
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'TSEnumDeclaration',
+          message: `Enums introduce unexpected runtime behavior, break TypeScript's structural typing, and add unnecessary complexity. Use union types or 'as const' objects instead.`,
+        },
+      ],
     },
   },
 ]
