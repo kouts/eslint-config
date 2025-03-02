@@ -45,7 +45,7 @@
     "dev": "pkgroll --watch",
     "build": "pkgroll --clean-dist",
     "inspect": "npx @eslint/config-inspector --config eslint.config.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit": "vitest",
     "lint": "pnpm run build && eslint .",
     "lint-fix": "pnpm run build && eslint --fix .",
     "lint-fixtures": "pnpm --filter ./fixtures/vue3-ts-vite-starter-template lint",
@@ -87,7 +87,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "pkgroll": "^2.11.2",
-    "typescript": "5.7.3"
+    "typescript": "5.7.3",
+    "vitest": "^3.0.7"
   },
   "peerDependencies": {
     "eslint": "^9.8.0"

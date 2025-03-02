@@ -33,11 +33,14 @@ defineOptions({
 type Props = {
   msg: string
 }
+
 withDefaults(defineProps<Props>(), {
   msg: '',
 })
 
-console.log(test)
+if (process.env.NODE_ENV === 'unknown') {
+  console.log(test)
+}
 </script>
 
 <style lang="scss" scoped>
