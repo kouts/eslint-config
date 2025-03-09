@@ -2,7 +2,7 @@
   "name": "@kouts/eslint-config",
   "type": "module",
   "version": "0.0.0-semantic-release",
-  "packageManager": "pnpm@9.15.6",
+  "packageManager": "pnpm@10.6.1",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
@@ -71,24 +71,24 @@
   },
   "dependencies": {
     "@vitest/eslint-plugin": "^1.1.36",
-    "eslint-config-prettier": "^10.0.2",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-html": "^8.1.2",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-vue": "^9.32.0",
+    "eslint-plugin-vue": "^10.0.0",
     "neostandard": "^0.12.1",
-    "prettier": "^3.3.3"
+    "prettier": "^3.5.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
-    "@types/node": "^22.13.8",
-    "eslint": "^9.21.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "pkgroll": "^2.11.2",
-    "typescript": "5.7.3",
-    "vitest": "^3.0.7"
+    "typescript": "5.8.2",
+    "vitest": "^3.0.8"
   },
   "peerDependencies": {
     "eslint": "^9.8.0"
