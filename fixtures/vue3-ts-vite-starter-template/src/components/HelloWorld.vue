@@ -31,7 +31,7 @@ defineOptions({
 })
 
 type Props = {
-  msg: string
+  msg?: string
 }
 
 withDefaults(defineProps<Props>(), {

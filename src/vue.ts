@@ -40,7 +40,7 @@ const vue = (options?: Options) => {
         // Strengthen vue/(vue3-)recommended preset for autofix
         // https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/recommended.js
         'vue/attributes-order': 'error',
-        'vue/component-tags-order': 'error',
+        'vue/block-order': 'error',
         'vue/no-lone-template': 'error',
         'vue/no-multiple-slot-args': 'error',
         'vue/no-v-html': 'error',
