@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/kouts/eslint-config/compare/v2.0.8...v3.0.0) (2025-03-09)
+
+
+### Bug Fixes
+
+* fixed @eslint/js import ([ff06cf0](https://github.com/kouts/eslint-config/commit/ff06cf0330e1996bd09c3d25ba5d7752c5636f4e))
+* updated component-tags-order rule ([45860bb](https://github.com/kouts/eslint-config/commit/45860bb009272db0ff0d7962cd0ef59b74dee3f5))
+* updated TypeScript to 5.8.2 ([ca192c8](https://github.com/kouts/eslint-config/commit/ca192c86f38cf8d5d03194d8b1140ae989088a8b))
+
+
+### BREAKING CHANGES
+
+* TypeScript 5.8.2 required updating other dependencies as well.
+
 ## [2.0.8](https://github.com/kouts/eslint-config/compare/v2.0.7...v2.0.8) (2025-03-02)
 
 
