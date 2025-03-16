@@ -22,7 +22,9 @@ Add an `eslint.config.js` (or `eslint.config.cjs` if your project is CommonJS) t
 import { config } from '@kouts/eslint-config'
 
 export default [
-  ...config(),
+  ...config({
+    env: ['browser'], // Add your environment globals here
+  }),
   {
     // Add custom rules here
   },
