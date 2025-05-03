@@ -9,8 +9,6 @@ import '@/scss/app.scss'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-defineOptions({ name: 'App' })
-
 const route = useRoute()
 const layout = computed(() => `layout-${route.meta.layout || 'default'}`)
 </script>
