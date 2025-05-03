@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/kouts/eslint-config/compare/v3.0.3...v3.0.4) (2025-05-03)
+
+
+### Bug Fixes
+
+* added vue require name rule ([bc34723](https://github.com/kouts/eslint-config/commit/bc34723d597106357500a4231728f36a052dc7e3))
+
 ## [3.0.3](https://github.com/kouts/eslint-config/compare/v3.0.2...v3.0.3) (2025-04-27)
 
 
