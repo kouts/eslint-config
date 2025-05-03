@@ -112,6 +112,68 @@ Ad the following settings to your VS Code project settings for autofix on save:
   - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) for auto-fixing imports order
   - [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest) for linting Vitest test files
 
+## Vue-specific Rules
+
+This configuration extends the [ESLint plugin Vue recommended preset](https://eslint.vuejs.org/rules/#priority-c-recommended-potentially-dangerous-patterns) but makes several modifications to enhance code quality and consistency in Vue components.
+
+### Disabled Rules
+
+- `vue/max-attributes-per-line`: Turned off to allow flexibility in attribute formatting
+- `vue/singleline-html-element-content-newline`: Turned off for cleaner code with fewer line breaks
+
+### Strengthened Rules (set to 'error')
+
+- `vue/attributes-order`: Enforces consistent order of component attributes
+- `vue/block-order`: Enforces consistent order of component blocks
+- `vue/no-lone-template`: Prevents unnecessary template wrappers
+- `vue/no-multiple-slot-args`: Prevents passing multiple arguments to slots
+- `vue/no-v-html`: Prevents use of v-html to mitigate XSS risks
+- `vue/order-in-components`: Enforces consistent order of component options
+- `vue/this-in-template`: Prevents usage of this in templates
+- `vue/require-prop-types`: Requires type definitions for props
+- `vue/component-name-in-template-casing`: Enforces PascalCase for component names in templates
+- `vue/no-static-inline-styles`: Prevents inline styles in templates
+- `vue/require-explicit-emits`: Requires explicit emit declarations
+- `vue/require-name-property`: Requires components to have a name property
+- `vue/html-self-closing`: Enforces self-closing style for components with no content
+- `vue/dot-notation`: Enforces dot notation where possible in templates
+
+### Custom Vue Rules
+
+- `kouts/vue-require-name-in-setup`: Enforces that Vue components using `<script setup>` must have a component name.
+
+### Customizing/Disabling Vue Rules
+
+You can customize or disable any of these rules in your ESLint config:
+
+```js
+// eslint.config.js
+import { config } from '@kouts/eslint-config'
+
+export default [
+  ...config(),
+  {
+    rules: {
+      // Disable custom rule
+      'kouts/vue-require-name-in-setup': 'off',
+
+      // Modify strengthened Vue rules
+      'vue/attributes-order': 'warn',
+      'vue/no-v-html': 'off',
+
+      // Re-enable rules that were turned off
+      'vue/max-attributes-per-line': [
+        'error',
+        {
+          singleline: { max: 3 },
+          multiline: { max: 1 },
+        },
+      ],
+    },
+  },
+]
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
