@@ -26,9 +26,7 @@ const test = ref('Test separate script lang block')
 </script>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'HelloWorld',
-})
+defineOptions({ name: 'HelloWorld' })
 
 type Props = {
   msg?: string

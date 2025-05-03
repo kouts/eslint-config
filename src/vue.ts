@@ -33,6 +33,9 @@ const vue = (options?: Options) => {
       files: ['*.vue', '**/*.vue'],
       ...languageOptions,
       rules: {
+        // Custom rules
+        'kouts/vue-require-name-in-setup': 'error',
+
         // Overrides for vue/(vue3-)recommended preset
         'vue/max-attributes-per-line': 'off',
         'vue/singleline-html-element-content-newline': 'off',

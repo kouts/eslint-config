@@ -5,6 +5,7 @@ import pluginHtml from 'eslint-plugin-html'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
 import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from 'neostandard'
+import customRules from './rules'
 import { typescript } from './typescript'
 import { vue } from './vue'
 
@@ -13,6 +14,8 @@ type Options = {
   vueVersion?: 2 | 3
   vitest: boolean
 } & NeostandardOptions
+
+const customRulesPlugin = { name: 'kouts', rules: customRules }
 
 const config = (options?: Options) => {
   const opts: Options = {
@@ -27,6 +30,14 @@ const config = (options?: Options) => {
   }
 
   const linterConfig: Linter.Config[] = [
+    // Custom rules plugin
+    {
+      name: 'kouts/custom-rules',
+      plugins: {
+        kouts: customRulesPlugin,
+      },
+    },
+
     {
       name: 'kouts/ignores',
       ignores: [
