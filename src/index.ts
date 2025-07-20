@@ -128,7 +128,8 @@ const config = (options?: Options) => {
             name: 'kouts/vitest',
             files: ['test/**', 'tests/**', '**/*.test.{js,ts}*', '**/*.spec.{js,ts}'],
             plugins: {
-              vitest: pluginVitest,
+              // TODO: Remove this when https://github.com/vitest-dev/eslint-plugin-vitest/issues/737 is resolved
+              vitest: pluginVitest.meta,
             },
             rules: {
               ...pluginVitest.configs.recommended.rules,
