@@ -17,7 +17,7 @@ type Options = {
 
 const customRulesPlugin = { name: 'kouts', rules: customRules }
 
-const config = (options?: Options) => {
+const config = (options?: Options): Linter.Config[] => {
   const opts: Options = {
     noJsx: true,
     noStyle: true,
@@ -128,8 +128,7 @@ const config = (options?: Options) => {
             name: 'kouts/vitest',
             files: ['test/**', 'tests/**', '**/*.test.{js,ts}*', '**/*.spec.{js,ts}'],
             plugins: {
-              // TODO: Remove this when https://github.com/vitest-dev/eslint-plugin-vitest/issues/737 is resolved
-              vitest: pluginVitest.meta,
+              vitest: pluginVitest,
             },
             rules: {
               ...pluginVitest.configs.recommended.rules,
