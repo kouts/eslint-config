@@ -1,3 +1,11 @@
+## [3.0.5](https://github.com/kouts/eslint-config/compare/v3.0.4...v3.0.5) (2025-07-20)
+
+
+### Bug Fixes
+
+* fixed @vitest/eslint-plugin type issue ([75a4db4](https://github.com/kouts/eslint-config/commit/75a4db4d8d79301991fdb5b8832d039dd6a17071))
+* updated npm packages and node ([2c24346](https://github.com/kouts/eslint-config/commit/2c243466eb2763b1df5ebcd6cb93fa6a7cd8e764))
+
 ## [3.0.4](https://github.com/kouts/eslint-config/compare/v3.0.3...v3.0.4) (2025-05-03)
 
 
