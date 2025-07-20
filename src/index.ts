@@ -17,7 +17,7 @@ type Options = {
 
 const customRulesPlugin = { name: 'kouts', rules: customRules }
 
-const config = (options?: Options) => {
+const config = (options?: Options): Linter.Config[] => {
   const opts: Options = {
     noJsx: true,
     noStyle: true,
