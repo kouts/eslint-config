@@ -35,6 +35,9 @@ jobs:
       - name: Run linter 👀
         run: pnpm run lint-fix
 
+      - name: Run tests 🧪
+        run: pnpm run test:unit
+
       - name: Build ⚙️
         run: pnpm run build
   release:
