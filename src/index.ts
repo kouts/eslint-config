@@ -1,5 +1,4 @@
 import js from '@eslint/js'
-import pluginVitest from '@vitest/eslint-plugin'
 import type { Linter } from 'eslint'
 import pluginHtml from 'eslint-plugin-html'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
@@ -7,6 +6,7 @@ import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
 import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from 'neostandard'
 import customRules from './rules'
 import { typescript } from './typescript'
+import { vitest } from './vitest'
 import { vue } from './vue'
 
 type Options = {
@@ -122,25 +122,7 @@ const config = (options?: Options): Linter.Config[] => {
     ...(opts.vue ? vue({ version: opts.vueVersion, ts: opts.ts }) : []),
 
     // Vitest
-    ...(opts.vitest
-      ? [
-          {
-            name: 'kouts/vitest',
-            files: ['test/**', 'tests/**', '**/*.test.{js,ts}*', '**/*.spec.{js,ts}'],
-            plugins: {
-              vitest: pluginVitest,
-            },
-            rules: {
-              ...pluginVitest.configs.recommended.rules,
-            },
-            languageOptions: {
-              globals: {
-                ...pluginVitest.environments.env.globals,
-              },
-            },
-          },
-        ]
-      : []),
+    ...(opts.vitest ? vitest : []),
 
     // Prettier
     {
