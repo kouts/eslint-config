@@ -1,3 +1,10 @@
+## [3.0.7](https://github.com/kouts/eslint-config/compare/v3.0.6...v3.0.7) (2025-09-14)
+
+
+### Bug Fixes
+
+* added expectTypeOf to vitest accepted function name for assertions ([989e758](https://github.com/kouts/eslint-config/commit/989e758b389b2f7bbf705cbf84063d6818e25749))
+
 ## [3.0.6](https://github.com/kouts/eslint-config/compare/v3.0.5...v3.0.6) (2025-08-15)
 
 
