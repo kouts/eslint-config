@@ -1,5 +1,19 @@
 import type { Rule } from 'eslint'
 
+// Minimal type definitions for the AST nodes we use
+type CallExpressionNode = {
+  arguments?: {
+    type: string
+    properties?: {
+      type: string
+      key?: {
+        type: string
+        name?: string
+      }
+    }[]
+  }[]
+}
+
 const rule: Rule.RuleModule = {
   meta: {
     type: 'suggestion',
@@ -17,7 +31,7 @@ const rule: Rule.RuleModule = {
     return {
       // We'll assume every Vue file with script setup needs a defineOptions name
       // Check for defineOptions function calls
-      'CallExpression[callee.name="defineOptions"]'(node) {
+      'CallExpression[callee.name="defineOptions"]'(node: CallExpressionNode) {
         // Check if the first argument is an object expression
         if (node.arguments?.length && node.arguments[0]?.type === 'ObjectExpression') {
           const properties = node.arguments[0].properties || []
