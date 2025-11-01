@@ -1,3 +1,10 @@
+## [3.0.9](https://github.com/kouts/eslint-config/compare/v3.0.8...v3.0.9) (2025-11-01)
+
+
+### Bug Fixes
+
+* updated npm packages,added trusted publishing ([31d93b1](https://github.com/kouts/eslint-config/commit/31d93b13b04950356ca09eefd6223abb1384bdf4))
+
 ## [3.0.8](https://github.com/kouts/eslint-config/compare/v3.0.7...v3.0.8) (2025-09-21)
 
 
