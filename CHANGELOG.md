@@ -1,3 +1,10 @@
+## [3.0.10](https://github.com/kouts/eslint-config/compare/v3.0.9...v3.0.10) (2025-11-29)
+
+
+### Bug Fixes
+
+* updated prettier and npm packages ([bf59e85](https://github.com/kouts/eslint-config/commit/bf59e85c02e714a5e3c9cf7ec887ae23fdc6d4ff))
+
 ## [3.0.9](https://github.com/kouts/eslint-config/compare/v3.0.8...v3.0.9) (2025-11-01)
 
 
