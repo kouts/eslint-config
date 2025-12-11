@@ -1,18 +1,5 @@
 import type { Rule } from 'eslint'
-
-// Minimal type definitions for the AST nodes we use
-type CallExpressionNode = {
-  arguments?: {
-    type: string
-    properties?: {
-      type: string
-      key?: {
-        type: string
-        name?: string
-      }
-    }[]
-  }[]
-}
+import type { CallExpression, Program } from 'estree'
 
 const rule: Rule.RuleModule = {
   meta: {
@@ -31,7 +18,7 @@ const rule: Rule.RuleModule = {
     return {
       // We'll assume every Vue file with script setup needs a defineOptions name
       // Check for defineOptions function calls
-      'CallExpression[callee.name="defineOptions"]'(node: CallExpressionNode) {
+      'CallExpression[callee.name="defineOptions"]'(node: CallExpression) {
         // Check if the first argument is an object expression
         if (node.arguments?.length && node.arguments[0]?.type === 'ObjectExpression') {
           const properties = node.arguments[0].properties || []
@@ -47,7 +34,7 @@ const rule: Rule.RuleModule = {
       },
 
       // At the end of the file, report if we don't have defineOptions with name
-      'Program:exit'(node) {
+      'Program:exit'(node: Program) {
         // Check if this is a Vue file by file extension
         const filename = context.physicalFilename
         const isVueFile = filename.endsWith('.vue')
