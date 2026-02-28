@@ -6,7 +6,6 @@ const rule: Rule.RuleModule = {
     type: 'suggestion',
     docs: {
       description: 'Require defineOptions with name attribute in script setup Vue components',
-      category: 'Best Practices',
       recommended: true,
     },
     schema: [],
