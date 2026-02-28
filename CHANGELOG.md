@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/kouts/eslint-config/compare/v3.0.12...v3.1.0) (2026-02-28)
+
+
+### Features
+
+* updated eslint to v10 ([bd48a30](https://github.com/kouts/eslint-config/commit/bd48a30f8c9f35a6272e1137f64f91a9900b93a1))
+
 ## [3.0.12](https://github.com/kouts/eslint-config/compare/v3.0.11...v3.0.12) (2025-12-31)
 
 
