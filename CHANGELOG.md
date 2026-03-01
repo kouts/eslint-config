@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/kouts/eslint-config/compare/v3.1.0...v3.1.1) (2026-03-01)
+
+
+### Bug Fixes
+
+* updated peerDependencies ([b8c9b7b](https://github.com/kouts/eslint-config/commit/b8c9b7b3f5249eb3d17cea9c9a8c4ac898408166))
+
 # [3.1.0](https://github.com/kouts/eslint-config/compare/v3.0.12...v3.1.0) (2026-02-28)
 
 
