@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint'
-import { plugins } from 'neostandard'
+import { plugins } from './neostandard'
 
 export const typescript: Linter.Config[] = [
   ...(plugins['typescript-eslint'].configs.recommended as Linter.Config[]),
