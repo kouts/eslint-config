@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 import pluginVue from 'eslint-plugin-vue'
-import { plugins } from 'neostandard'
+import { plugins } from './neostandard'
 
 type Options = {
   version?: 2 | 3

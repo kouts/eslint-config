@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 import pluginHtml from 'eslint-plugin-html'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
-import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from 'neostandard'
+import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from './neostandard'
 import customRules from './rules'
 import { typescript } from './typescript'
 import { vitest } from './vitest'
@@ -79,16 +79,6 @@ const config = (options?: Options): Linter.Config[] => {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         // Enforce dot notation
         'dot-notation': ['error'],
-        // Import rules
-        ...(opts.ts
-          ? {
-              'import-x/named': 'off',
-              'no-unused-vars': 'off',
-            }
-          : {}),
-        'import-x/no-mutable-exports': 'error',
-        'import-x/newline-after-import': ['error', { count: 1 }],
-        'import-x/no-self-import': 'error',
       },
     },
     // Sort imports
