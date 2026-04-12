@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/kouts/eslint-config/compare/v3.1.1...v3.1.2) (2026-04-12)
+
+
+### Bug Fixes
+
+* trigger release ([900e640](https://github.com/kouts/eslint-config/commit/900e6407f87bd4fd9ed032eae91630f06b1c05f8))
+
 ## [3.1.1](https://github.com/kouts/eslint-config/compare/v3.1.0...v3.1.1) (2026-03-01)
 
 
