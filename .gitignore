@@ -9,3 +9,5 @@ dist
 
 # Misc
 .eslint-config-inspector
+tmp
+.codex

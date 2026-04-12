@@ -1,5 +1,6 @@
 declare module 'eslint-plugin-html'
 declare module 'eslint-plugin-import-x'
+declare module 'eslint-plugin-promise'
 declare module 'eslint-plugin-vue'
 
 // TODO: Remove this when https://github.com/vitest-dev/eslint-plugin-vitest/issues/737 is resolved

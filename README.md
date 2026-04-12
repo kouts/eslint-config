@@ -33,7 +33,7 @@ export default [
 
 #### Customizing the config
 
-The configuration comes with default settings that extend the [neostandard](https://github.com/neostandard/neostandard/tree/main?tab=readme-ov-file#configuration-options) config. You can further customize it by passing an object to the `config` function:
+The configuration comes with default settings that internally mirror the [neostandard](https://github.com/neostandard/neostandard/tree/main?tab=readme-ov-file#configuration-options) baseline. You can further customize it by passing an object to the `config` function:
 
 **Config settings defaults:**
 
@@ -102,15 +102,16 @@ Ad the following settings to your VS Code project settings for autofix on save:
 
 ## Features
 
-- Based on [neostandard](https://github.com/neostandard/neostandard)
+- Internally mirrors [neostandard](https://github.com/neostandard/neostandard)
 - [Prettier](https://prettier.io) for code formatting
 - Plugins
   - [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) for linting inline scripts contained in HTML files
   - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue/) for linting Vue.js files
   - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) for disabling all rules that conflict with Prettier
-  - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) for using Prettier as a code formatter with `eslint --fix`
-  - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) for auto-fixing imports order
-  - [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest) for linting Vitest test files
+- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) for using Prettier as a code formatter with `eslint --fix`
+- [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) for auto-fixing imports order
+- [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest) for linting Vitest test files
+- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x) for JavaScript import/export checks
 
 ## Vue-specific Rules
 
