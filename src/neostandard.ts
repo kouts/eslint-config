@@ -1,6 +1,5 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
-import { fixupConfigRules } from '@eslint/compat'
 import { gitignoreToMinimatch } from '@humanwhocodes/gitignore-to-minimatch'
 import stylistic from '@stylistic/eslint-plugin'
 import type { ESLint, Linter } from 'eslint'
@@ -214,8 +213,7 @@ const modernization: Linter.Config = {
   },
 }
 
-const promise = fixupConfigRules(pluginPromise.configs['flat/recommended'] as Linter.Config)
-const promiseConfigs = Array.isArray(promise) ? promise : [promise]
+const promiseConfigs = [pluginPromise.configs['flat/recommended'] as Linter.Config]
 
 const modernizationStyles: Linter.Config = {
   name: 'neostandard/style/modernization-since-standard-17',
@@ -259,7 +257,7 @@ const style: Linter.Config = {
     '@stylistic/computed-property-spacing': ['error', 'never', { enforceForClassMembers: true }],
     '@stylistic/dot-location': ['error', 'property'],
     '@stylistic/eol-last': 'error',
-    '@stylistic/func-call-spacing': ['error', 'never'],
+    '@stylistic/function-call-spacing': ['error', 'never'],
     '@stylistic/generator-star-spacing': ['error', { before: true, after: true }],
     '@stylistic/indent': [
       'error',
@@ -277,26 +275,8 @@ const style: Linter.Config = {
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
         ignoreComments: false,
-        ignoredNodes: [
-          'TemplateLiteral *',
-          'JSXElement',
-          'JSXElement > *',
-          'JSXAttribute',
-          'JSXIdentifier',
-          'JSXNamespacedName',
-          'JSXMemberExpression',
-          'JSXSpreadAttribute',
-          'JSXExpressionContainer',
-          'JSXOpeningElement',
-          'JSXClosingElement',
-          'JSXFragment',
-          'JSXOpeningFragment',
-          'JSXClosingFragment',
-          'JSXText',
-          'JSXEmptyExpression',
-          'JSXSpreadChild',
-        ],
-        offsetTernaryExpressions: true,
+        ignoredNodes: ['TemplateLiteral *'],
+        offsetTernaryExpressions: { CallExpression: false, AwaitExpression: false, NewExpression: false },
       },
     ],
     '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],
@@ -325,11 +305,11 @@ const style: Linter.Config = {
     '@stylistic/no-whitespace-before-property': 'error',
     '@stylistic/object-curly-newline': ['error', { multiline: true, consistent: true }],
     '@stylistic/object-curly-spacing': ['error', 'always'],
-    '@stylistic/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+    '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
     '@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
     '@stylistic/padded-blocks': ['error', { blocks: 'never', switches: 'never', classes: 'never' }],
     '@stylistic/quote-props': ['error', 'as-needed'],
-    '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
+    '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'never' }],
     '@stylistic/rest-spread-spacing': ['error', 'never'],
     '@stylistic/semi': ['error', 'never'],
     '@stylistic/semi-spacing': ['error', { before: false, after: true }],
@@ -447,15 +427,6 @@ const jsxStyles: Linter.Config = {
     ],
     '@stylistic/jsx-equals-spacing': ['error', 'never'],
     '@stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
-    '@stylistic/jsx-indent': [
-      'error',
-      2,
-      {
-        checkAttributes: false,
-        indentLogicalExpressions: true,
-      },
-    ],
-    '@stylistic/jsx-indent-props': ['error', 2],
     '@stylistic/jsx-pascal-case': ['error', { allowAllCaps: false }],
     '@stylistic/jsx-props-no-multi-spaces': 'error',
     '@stylistic/jsx-tag-spacing': [
@@ -720,7 +691,7 @@ export const neostandard = (options?: NeostandardOptions): Linter.Config[] => {
       ? [
           typescriptify(jsConfigs, {
             files: ['**/*.ts', ...(noJsx ? [] : ['**/*.tsx']), ...(filesTs || [])],
-            ignores,
+            ignores: [...(ignores || []), '**/*.md/**'],
             name: 'neostandard/ts',
           }),
         ]
