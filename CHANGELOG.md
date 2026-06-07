@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/kouts/eslint-config/compare/v3.1.3...v3.1.4) (2026-06-07)
+
+
+### Bug Fixes
+
+* updated stylistic plugin ([af7e97e](https://github.com/kouts/eslint-config/commit/af7e97e12d5a99b0194c40768a2147ecdbb17e8f))
+
 ## [3.1.3](https://github.com/kouts/eslint-config/compare/v3.1.2...v3.1.3) (2026-05-03)
 
 
