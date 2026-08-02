@@ -1,3 +1,11 @@
+## [3.1.5](https://github.com/kouts/eslint-config/compare/v3.1.4...v3.1.5) (2026-08-02)
+
+
+### Bug Fixes
+
+* updated pnpm to v11 ([e01baf8](https://github.com/kouts/eslint-config/commit/e01baf867c7856c64bae9a9b53ea02d0ed0fe469))
+* updated pnpm to v11 ([ab02d4a](https://github.com/kouts/eslint-config/commit/ab02d4a2ec0eb8a1a4b5d502612331817714db38))
+
 ## [3.1.4](https://github.com/kouts/eslint-config/compare/v3.1.3...v3.1.4) (2026-06-07)
 
 
