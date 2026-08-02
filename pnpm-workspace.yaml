@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@vitest/eslint-plugin@1.6.25'
+  - globals@17.9.0
