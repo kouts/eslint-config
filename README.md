@@ -2,9 +2,9 @@
 
 > Custom ESLint and Prettier config with Vue.js support and sensible defaults
 
-> [!NOTE]  
-> Starting from v1, this ESLint config uses the [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) and is only compatible with ESLint v9 or v8.50.0+.  
-> If you're looking for the previous version, checkout the [README]('./README_V0.md') here.
+> [!NOTE]
+> This config uses the [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), requires Node.js `^22.13.0 || >=24`, and supports ESLint 10.
+> If you're looking for the previous version, see [README_V0.md](./README_V0.md).
 
 ## Installation
 
@@ -22,9 +22,7 @@ Add an `eslint.config.js` (or `eslint.config.cjs` if your project is CommonJS) t
 import { config } from '@kouts/eslint-config'
 
 export default [
-  ...config({
-    env: ['browser'], // Add your environment globals here
-  }),
+  ...config(),
   {
     // Add custom rules here
   },
@@ -33,26 +31,31 @@ export default [
 
 #### Customizing the config
 
-The configuration comes with default settings that internally mirror the [neostandard](https://github.com/neostandard/neostandard/tree/main?tab=readme-ov-file#configuration-options) baseline. You can further customize it by passing an object to the `config` function:
+The configuration composes [neostandard](https://github.com/neostandard/neostandard#configuration-options) with Vue, Vitest, Prettier, import checking, and project-specific rules. You can customize it by passing an object to `config`.
 
-**Config settings defaults:**
+**Config defaults:**
 
-| Option     | Type       | Description                   | Default |
-| ---------- | ---------- | ----------------------------- | ------- |
-| ts         | `boolean`  | Enable TypeScript support     | `true`  |
-| noJsx      | `boolean`  | No jsx rules will be added    | `true`  |
-| noStyle    | `boolean`  | No style rules will be added  | `true`  |
-| semi       | `boolean`  | Use semicolons                | `false` |
-| vue        | `boolean`  | Enable Vue.js support         | `true`  |
-| vueVersion | `2` or `3` | Specify the version of Vue.js | `3`     |
-| vitest     | `boolean`  | Enable Vitest support         | `true`  |
+| Option     | Type       | Description                                   | Default              |
+| ---------- | ---------- | --------------------------------------------- | -------------------- |
+| ts         | `boolean`  | Enable TypeScript support                     | `true`               |
+| noJsx      | `boolean`  | Disable JSX rules                             | `true`               |
+| noStyle    | `boolean`  | Disable style rules                           | `true`               |
+| semi       | `boolean`  | Use semicolons                                | `false`              |
+| vue        | `boolean`  | Enable Vue.js support                         | `true`               |
+| vueVersion | `2` or `3` | Specify the Vue.js version                    | `3`                  |
+| vitest     | `boolean`  | Enable Vitest support                         | `true`               |
+| env        | `string[]` | Additional global environments                | Node.js and browser  |
+| files      | `string[]` | Additional patterns for neostandard to lint   | `**/*.vue` included  |
+| filesTs    | `string[]` | Additional patterns for TypeScript linting    | `[]`                 |
+| globals    | `string[]` or object | Additional global variables           | None                 |
+| ignores    | `string[]` | Additional patterns to ignore                 | `[]`                 |
 
 **Example:**
 
 ```javascript
 config({
   ts: false,
-  vue: true
+  vue: true,
   vueVersion: 3,
   vitest: false,
 })
@@ -70,7 +73,7 @@ export default prettierConfig
 
 ### package.json scripts
 
-Add the following ESLint commands to your `.package-json` for linting and autofixing:
+Add the following ESLint commands to your `package.json` for linting and autofixing:
 
 ```json
 {
@@ -81,7 +84,7 @@ Add the following ESLint commands to your `.package-json` for linting and autofi
 
 ### VS Code settings
 
-Ad the following settings to your VS Code project settings for autofix on save:
+Add the following settings to your VS Code project settings for autofix on save:
 
 `.vscode/settings.json`
 
@@ -102,7 +105,7 @@ Ad the following settings to your VS Code project settings for autofix on save:
 
 ## Features
 
-- Internally mirrors [neostandard](https://github.com/neostandard/neostandard)
+- Built on [neostandard](https://github.com/neostandard/neostandard)
 - [Prettier](https://prettier.io) for code formatting
 - Plugins
   - [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) for linting inline scripts contained in HTML files
