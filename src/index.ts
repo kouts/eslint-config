@@ -1,9 +1,10 @@
 import js from '@eslint/js'
 import type { Linter } from 'eslint'
 import pluginHtml from 'eslint-plugin-html'
+import importX from 'eslint-plugin-import-x'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
-import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from './neostandard'
+import neostandard, { type NeostandardOptions, plugins, resolveIgnoresFromGitignore } from 'neostandard'
 import customRules from './rules'
 import { typescript } from './typescript'
 import { vitest } from './vitest'
@@ -12,7 +13,7 @@ import { vue } from './vue'
 type Options = {
   vue?: boolean
   vueVersion?: 2 | 3
-  vitest: boolean
+  vitest?: boolean
 } & NeostandardOptions
 
 const customRulesPlugin = { name: 'kouts', rules: customRules }
@@ -62,6 +63,24 @@ const config = (options?: Options): Linter.Config[] => {
 
     // Neostandard
     ...neostandard(opts),
+    {
+      name: 'kouts/import-x',
+      files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'],
+      plugins: {
+        'import-x': importX,
+      },
+      rules: {
+        'import-x/export': 'error',
+        'import-x/first': 'error',
+        'import-x/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
+        'import-x/no-duplicates': 'error',
+        'import-x/no-named-default': 'error',
+        'import-x/no-webpack-loader-syntax': 'error',
+        'import-x/no-mutable-exports': 'error',
+        'import-x/newline-after-import': ['error', { count: 1 }],
+        'import-x/no-self-import': 'error',
+      },
+    },
     {
       name: 'kouts/neostandard-overrides',
       rules: {
