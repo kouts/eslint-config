@@ -1,3 +1,11 @@
+## [3.1.6](https://github.com/kouts/eslint-config/compare/v3.1.5...v3.1.6) (2026-09-18)
+
+
+### Bug Fixes
+
+* added 0.14.0-next.1 for eslint 10 support ([ae65bcc](https://github.com/kouts/eslint-config/commit/ae65bcc5f76b319102d36e0f1308096535b960a7))
+* preserve Vue support with neostandard ([d025f5c](https://github.com/kouts/eslint-config/commit/d025f5ceb2a835723eb67f12b6f0fa719b2cffbe))
+
 ## [3.1.5](https://github.com/kouts/eslint-config/compare/v3.1.4...v3.1.5) (2026-08-02)
 
 
