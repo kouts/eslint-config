@@ -17,6 +17,8 @@ type Options = {
 } & NeostandardOptions
 
 const customRulesPlugin = { name: 'kouts', rules: customRules }
+const defaultEnvironments: NonNullable<NeostandardOptions['env']> = ['node', 'browser']
+const defaultFiles = ['**/*.vue']
 
 const config = (options?: Options): Linter.Config[] => {
   const opts: Options = {
@@ -28,6 +30,8 @@ const config = (options?: Options): Linter.Config[] => {
     vueVersion: 3,
     vitest: true,
     ...options,
+    env: [...new Set([...defaultEnvironments, ...(options?.env || [])])],
+    files: [...new Set([...defaultFiles, ...(options?.files || [])])],
   }
 
   const linterConfig: Linter.Config[] = [
