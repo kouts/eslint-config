@@ -1,3 +1,10 @@
+## [3.1.9](https://github.com/kouts/eslint-config/compare/v3.1.8...v3.1.9) (2026-10-07)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([52994c9](https://github.com/kouts/eslint-config/commit/52994c91812e0e5280a35d2c622a456dc14fb0c1))
+
 ## [3.1.8](https://github.com/kouts/eslint-config/compare/v3.1.7...v3.1.8) (2026-09-28)
 
 
