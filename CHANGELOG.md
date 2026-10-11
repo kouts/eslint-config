@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/kouts/eslint-config/compare/v3.1.9...v3.1.10) (2026-10-11)
+
+
+### Bug Fixes
+
+* restore import-x checks for TypeScript and Vue ([1cbefa5](https://github.com/kouts/eslint-config/commit/1cbefa557b26025679c8f2b9642e64570d12da5b))
+
 ## [3.1.9](https://github.com/kouts/eslint-config/compare/v3.1.8...v3.1.9) (2026-10-07)
 
 
