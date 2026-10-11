@@ -69,7 +69,14 @@ const config = (options?: Options): Linter.Config[] => {
     ...neostandard(opts),
     {
       name: 'kouts/import-x',
-      files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'],
+      files: [
+        '**/*.js',
+        '**/*.mjs',
+        '**/*.cjs',
+        '**/*.jsx',
+        ...(opts.ts ? ['**/*.ts', '**/*.tsx'] : []),
+        ...(opts.vue ? ['**/*.vue'] : []),
+      ],
       plugins: {
         'import-x': importX,
       },
