@@ -13,11 +13,18 @@ describe('neostandard integration', () => {
     expect(result.messages).not.toEqual(expect.arrayContaining([expect.objectContaining({ ruleId: 'no-undef' })]))
   })
 
-  it('keeps import-x scoped to JavaScript files', () => {
+  it('applies import-x to JavaScript, TypeScript and Vue files', () => {
     const configs = config({ ts: true, noJsx: true })
     const importConfig = configs.find((config) => config.name === 'kouts/import-x')
 
-    expect(importConfig?.files).toEqual(['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'])
+    expect(importConfig?.files).toEqual(['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx', '**/*.ts', '**/*.tsx', '**/*.vue'])
     expect(importConfig?.rules?.['import-x/no-self-import']).toBe('error')
+  })
+
+  it('applies import-x only to JavaScript files when TypeScript and Vue are disabled', () => {
+    const configs = config({ ts: false, vue: false })
+    const importConfig = configs.find((config) => config.name === 'kouts/import-x')
+
+    expect(importConfig?.files).toEqual(['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'])
   })
 })

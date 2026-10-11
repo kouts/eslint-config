@@ -114,7 +114,7 @@ Add the following settings to your VS Code project settings for autofix on save:
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) for using Prettier as a code formatter with `eslint --fix`
 - [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) for auto-fixing imports order
 - [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest) for linting Vitest test files
-- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x) for JavaScript import/export checks
+- [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x) for import/export checks in JavaScript, TypeScript and Vue files
 
 ## Vue-specific Rules
 
