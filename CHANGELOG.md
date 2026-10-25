@@ -1,3 +1,11 @@
+## [3.1.11](https://github.com/kouts/eslint-config/compare/v3.1.10...v3.1.11) (2026-10-25)
+
+
+### Bug Fixes
+
+* **deps:** update neostandard to stable 0.14.0 ([a0f9677](https://github.com/kouts/eslint-config/commit/a0f9677ff3c599da4318283cb779322039f8762c))
+* **deps:** update root and Vue fixture dependencies ([a2b2cd7](https://github.com/kouts/eslint-config/commit/a2b2cd76207a9f8d0509e3120b52378bdeac85b3))
+
 ## [3.1.10](https://github.com/kouts/eslint-config/compare/v3.1.9...v3.1.10) (2026-10-11)
 
 
