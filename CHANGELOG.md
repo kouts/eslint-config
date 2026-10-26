@@ -1,3 +1,10 @@
+## [3.1.12](https://github.com/kouts/eslint-config/compare/v3.1.11...v3.1.12) (2026-10-26)
+
+
+### Bug Fixes
+
+* **deps:** update root and Vue fixture dependencies ([4ecb8de](https://github.com/kouts/eslint-config/commit/4ecb8de3cb53b137738de07cd1b09b4e9d021ebd))
+
 ## [3.1.11](https://github.com/kouts/eslint-config/compare/v3.1.10...v3.1.11) (2026-10-25)
 
 
