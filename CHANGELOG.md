@@ -1,3 +1,11 @@
+## [3.1.13](https://github.com/kouts/eslint-config/compare/v3.1.12...v3.1.13) (2026-11-07)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([4676357](https://github.com/kouts/eslint-config/commit/4676357f6247a7618c8bc6fbc4f1910678082ce4))
+* **deps:** update packages and widen eslint peer range ([6c13f99](https://github.com/kouts/eslint-config/commit/6c13f99e15e868a2cc22bc1b213fc7299a5e79e5))
+
 ## [3.1.12](https://github.com/kouts/eslint-config/compare/v3.1.11...v3.1.12) (2026-10-26)
 
 
