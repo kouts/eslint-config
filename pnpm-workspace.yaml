@@ -6,3 +6,4 @@ minimumReleaseAgeExclude:
   - '@vitest/eslint-plugin@1.6.25'
   - globals@17.9.0
   - prettier@3.9.8
+  - eslint-plugin-import-x@4.18.0
