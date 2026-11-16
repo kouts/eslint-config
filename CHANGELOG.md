@@ -1,3 +1,13 @@
+## [3.1.14](https://github.com/kouts/eslint-config/compare/v3.1.13...v3.1.14) (2026-11-16)
+
+
+### Bug Fixes
+
+* **ci:** keep semantic-release on node 24 ([a753fe8](https://github.com/kouts/eslint-config/commit/a753fe863ad6f62870c2bea48fd02a8ae631b779))
+* **deps:** update fixture dependencies ([57aace0](https://github.com/kouts/eslint-config/commit/57aace0609fb96edd952331bc3b457423991972d))
+* **deps:** update packages ([2490484](https://github.com/kouts/eslint-config/commit/2490484cd7685320f4cafdcc4a1f80a880d57cbf))
+* **deps:** update Vue test utils ([cd9ba3a](https://github.com/kouts/eslint-config/commit/cd9ba3aae236d6f5e930da1722b397b5740fad24))
+
 ## [3.1.13](https://github.com/kouts/eslint-config/compare/v3.1.12...v3.1.13) (2026-11-07)
 
 
