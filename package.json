@@ -2,7 +2,7 @@
   "name": "@kouts/eslint-config",
   "type": "module",
   "version": "0.0.0-semantic-release",
-  "packageManager": "pnpm@12.21.0",
+  "packageManager": "pnpm@12.23.0",
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26"
   },
@@ -94,10 +94,10 @@
     "@types/node": "26.6.6",
     "eslint": "10.15.0",
     "husky": "9.1.7",
-    "lint-staged": "17.6.0",
+    "lint-staged": "17.6.2",
     "pkgroll": "2.29.1",
     "typescript": "6.0.3",
-    "vitest": "5.1.0",
+    "vitest": "5.1.1",
     "vue-eslint-parser": "10.4.2"
   },
   "peerDependencies": {
